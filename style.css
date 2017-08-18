@@ -1,3 +1,26 @@
 #titleHeader {
-    color: #000000
+    color: #E8E8E8;
+    font-family: "Arial";
+    font-size: 40px;
+    margin: auto;
+}
+
+body {
+    background-color: rgb(66, 66, 66);
+}
+
+.shape {
+    width: 1255px;
+    height: 45px;
+    border-radius: 2px;
+    background-color: rgb(96, 96, 96)
+}
+
+.labelSettings {
+    height: 25px;
+    width: 145px;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #BFBFBF;
 }
