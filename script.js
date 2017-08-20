@@ -1,38 +1,29 @@
 "use strict"
 
-// Add Element to body
-function addElementToBody(elementType, innerText) {
-    // Create Node
-    let elementCreated = document.createElement(`${elementType}`);
+// Still trying to figure out this button thing. Probably making it more complicated
+//than it needs to be...
 
-    // New type depending
+// Add Element to body
+function addButton(elementType, innerText, idName) {
+    // Create Node
+    String(elementType);
+    let elementCreated = document.createElement(elementType);
+
+    // Attributes
     String(innerText);
-    switch (elementCreated.getElementsByTagName) {
-        case "button":
-            elementCreated.innerHTML = innerText;
-            break;
-        case "label":
-            elementCreated.innerHTML = innerText;
-            break;
-    };
+    elementCreated.innerHTML = innerText;
+    String(idName)
+    elementCreated.setAttribute("id", idName);
 
     // Add to page
-    let newDiv = document.createElement("div");
-    newDiv.appendChild(elementCreated);
+    let currentBody = document.getElementById("bodyId");
+    currentBody.appendChild(elementCreated);
 
-    let placeAboveDiv = document.getElementById("currentDiv");
-    document.body.insertBefore(newDiv, placeAboveDiv);
+
+    elementCreated.addEventListener("click", function() {
+        alert("wew ima gay")
+    });
 
 };
 
-addElementToBody("button", "ha_lol");
-
-function buttonLabel() {
-    let buttonProperty = document.getElementsByTagName("button");
-
-    if (buttonProperty == document.getElementsByTagName("button")) {
-        get.addEventListener("click", function() {
-            alert("wew ima gay");
-        });
-    };
-};
+addButton("button", "ha_lol", "calculateButton");
