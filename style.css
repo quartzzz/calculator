@@ -25,3 +25,13 @@ button {
     background: salmon;
     border: none;
 }
+
+.boxOne {
+    margin-left: 400px;
+    margin-right: 50px;
+}
+
+.boxTwo {
+    margin-left: 100px;
+    margin-right: 50px;
+}

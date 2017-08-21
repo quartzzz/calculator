@@ -1,8 +1,15 @@
 "use strict"
 
-// Still trying to figure out this button thing. Probably making it more complicated
-//than it needs to be...
 let currentBody = document.getElementById("bodyId");
+
+class ButtonElement {
+    constructor(idNameForButElem, insideText) {
+        this = document.createElement("button");
+        this.innerHTML = `${insideText}`;
+        this.setAttribute("id", `${idNameForButElem}`);
+
+    }
+}
 
 function addButton(elementType, innerText, idNameForButton) {
     String(elementType);
@@ -30,11 +37,26 @@ function addButton(elementType, innerText, idNameForButton) {
 
 }
 
-function addNumberInput(numberId) {
-    let inputNumberBox = document.createElement("input");
-    inputNumberBox.setAttribute("type", "number");
 
-    inputNumberBox.setAttribute("id", numberId);
+let inputNumberBoxOne = document.createElement("input");
+inputNumberBoxOne.setAttribute("type", "number");
+inputNumberBoxOne.setAttribute("id", "number");
+inputNumberBoxOne.setAttribute("class", "boxOne");
+currentBody.appendChild(inputNumberBoxOne);
+
+let inputNumberBoxTwo = document.createElement("input");
+inputNumberBoxTwo.setAttribute("type", "number");
+inputNumberBoxTwo.setAttribute("id", "number");
+inputNumberBoxTwo.setAttribute("class", "boxTwo");
+currentBody.appendChild(inputNumberBoxTwo);
+
+
+
+function calculateNumbers() {
+    let numberOne = inputNumberBoxOne.textContent;
+    let numberTwo = inputNumberBoxTwo.textContent;
+    Number(numberOne);
+    Number(numberTwo);
 
 
 
