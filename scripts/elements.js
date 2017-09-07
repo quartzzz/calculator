@@ -4,12 +4,19 @@ let currentBody = document.getElementById("bodyId");
 
 class ButtonElement {
     constructor(idNameForButElem, insideText) {
+        String(idNameForButElem);
+        String(insideText);
+
         this = document.createElement("button");
         this.innerHTML = `${insideText}`;
         this.setAttribute("id", `${idNameForButElem}`);
-
     }
 }
+
+let calculateButtonObject = ButtonElement("calculateButton", "Calculate");
+currentBody.appendChild(calculateButtonObject);
+
+
 
 function addButton(elementType, innerText, idNameForButton) {
     String(elementType);
@@ -49,19 +56,3 @@ inputNumberBoxTwo.setAttribute("type", "number");
 inputNumberBoxTwo.setAttribute("id", "number");
 inputNumberBoxTwo.setAttribute("class", "boxTwo");
 currentBody.appendChild(inputNumberBoxTwo);
-
-
-
-function calculateNumbers() {
-    let numberOne = inputNumberBoxOne.textContent;
-    let numberTwo = inputNumberBoxTwo.textContent;
-    Number(numberOne);
-    Number(numberTwo);
-
-
-
-}
-
-
-// Carry out functions
-addButton("button", "ha_lol", "calculateButton");
